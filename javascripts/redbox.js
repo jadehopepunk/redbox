@@ -19,6 +19,11 @@ var RedBox = {
   {
     this.removeChildrenFromNode($('RB_window'));
     this.moveChildren($(id), $('RB_window'));
+    this.activateRBWindow();
+  },
+  
+  activateRBWindow: function()
+  {
     Element.hide('RB_loading');
     new Effect.Appear('RB_window', {duration: 0.4, queue: 'end'});  
     this.setWindowPosition();
