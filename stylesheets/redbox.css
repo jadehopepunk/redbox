@@ -20,15 +20,14 @@
 }
 
 #RB_loading {
-  position: relative;
-  top: 200px;
+  position: absolute;
   z-index: 101;
   width: 70px;
   height: 70px;
-  margin: 0 auto;
   text-align: center;
   background: #666 url(../images/redbox_spinner.gif) no-repeat center center;
   border: 2px solid black;
+  margin: 20px auto 0 auto;
 }
 
 #RB_window {
