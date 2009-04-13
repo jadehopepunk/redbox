@@ -2,8 +2,7 @@
 
 require 'ftools'
 
-plugins_dir = File.expand_path(".")
-redbox_dir = File.join(plugins_dir, 'redbox')
+redbox_dir = File.dirname(__FILE__)
 root_dir = File.join(redbox_dir, '..', '..', '..')
 
 File.copy File.join(redbox_dir, 'javascripts', 'redbox.js'), File.join(root_dir, 'public', 'javascripts', 'redbox.js')
