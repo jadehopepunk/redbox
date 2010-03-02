@@ -6,7 +6,7 @@ var RedBox = {
   usingIE6: function ()
   {
     if (this.isIE6 == null) {
-      this.isIE6 = (this.getInternetExplorerVersion() == 16);
+      this.isIE6 = (this.getInternetExplorerVersion() == 6);
     }
 
     return(this.isIE6);
