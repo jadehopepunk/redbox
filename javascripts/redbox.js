@@ -71,7 +71,7 @@ var RedBox = {
     }
     
     if (this.usingIE6()) {
-      new Insertion.Top('RB_window', '<iframe id="RB_iframe" frameborder=1 style="display:none;"></iframe>');
+      new Insertion.Top('RB_window', '<iframe id="RB_iframe" frameborder=0 style="display:none;"></iframe>');
     }
     new Insertion.Top('RB_overlay', '<div id="RB_loading" style="display: none"></div>');
 
