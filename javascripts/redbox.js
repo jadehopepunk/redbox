@@ -13,7 +13,7 @@ var RedBox = {
   {
     this.showOverlay();
     Element.show('RB_loading');
-    this.setWindowPosition();
+    //this.setWindowPosition();
   },
 
   addHiddenContent: function(id)
