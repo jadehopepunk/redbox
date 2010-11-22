@@ -78,7 +78,7 @@ var RedBox = {
     this.setOverlaySize();
     new Effect.Appear('RB_overlay', {duration: 0.4, to: 0.4, queue: 'end'});
     if (this.usingIE6()) {
-      new Effect.Appear('RB_iframe');
+      new Effect.Appear('RB_iframe', { duration: 0.1});
     }
   },
 
