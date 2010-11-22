@@ -45,6 +45,10 @@ var RedBox = {
   addHiddenContent: function(id)
   {
     this.removeChildrenFromNode($('RB_window'));
+    if (this.usingIE6()) {
+      new Insertion.Top('RB_window', '<iframe id="RB_iframe" frameborder=0 style="display:none;"></iframe>');
+      new Effect.Appear('RB_iframe', { duration: 0.1});
+    }
     this.moveChildren($(id), $('RB_window'));
     Element.hide('RB_loading');
     new Effect.Appear('RB_window', {duration: 0.4, queue: 'end'});  
