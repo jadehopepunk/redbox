@@ -87,3 +87,20 @@ If you find this plugin useful, you can give something back to the community by 
 what bits of functionality are generic enough to be useful as a rails plugin. Releasing rails plugins is dead
 simple, and helps us all do better work.
 
+Changes
+=======
+this version of redbox is almost identical to Craig's original.  It contains two changes.
+
+* Centering Issues
+I was having problems with popup windows not centering correctly.  It seemed like setWindowPosition was being
+called multiple times.  Commenting out the call from loading seemed to fix this.
+
+* Popups weren't showing correctly in IE6 if the underlying window had selects
+IE6 has an idea of windowed and windowless elements.  If a windowless element (the popup) tries to
+cover up a windowed element (an underlying page containing a SELECT box), then the select boxes show
+through the popup and it looks terrible.
+
+One of the fixes for this is to slide an iFrame under your popup (which IE6 considers a windowed element) to
+cover up the selects with a plain white background and then have your popup show on top of this.  In this fork
+of redbox, there is code to detect IE6 (based on the Microsoft recommendations on how to do so) and to insert
+an iFrame.  All other browsers (IE 7, 8, etc) and non-IE (firefox, safari, etc) will be unaffected by this change.
